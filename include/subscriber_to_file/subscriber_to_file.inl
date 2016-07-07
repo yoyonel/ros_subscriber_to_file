@@ -1,7 +1,7 @@
 #ifndef ROS_SUB_TO_FILE_INL
 #define ROS_SUB_TO_FILE_INL
 
-#include "ros_macros.h"
+#include <ros_macros.h>
 #include <fstream>
 
 // Note: template definition separate from implementation.
@@ -19,7 +19,7 @@
 //template class SubToFile< ::sensor_msgs::Imu, _sensor_msgs_serialize_type >;
 
 
-#define DECL_TEMPLATE_SUBTOFILE_CONCSTRUCTOR()  \
+#define DECL_TEMPLATE_SUBTOFILE_CONSTRUCTOR()  \
     template<typename TMsg, typename TMsgSerial>\
     SubToFile<TMsg, TMsgSerial>::SubToFile
 
@@ -28,7 +28,7 @@
     _return_typ SubToFile<TMsg, TMsgSerial>::_member_name
 
 
-DECL_TEMPLATE_SUBTOFILE_CONCSTRUCTOR() (
+DECL_TEMPLATE_SUBTOFILE_CONSTRUCTOR() (
         const uint32_t& _size_buffer,
         ros::NodeHandle _priv_nh
         ) :
