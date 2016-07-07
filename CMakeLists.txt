@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  ros_tools
 )
 
 ## System dependencies are found with CMake's conventions
@@ -103,7 +104,7 @@ find_package(Boost REQUIRED COMPONENTS system serialization)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES subscriber_to_file
-  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs ros_tools
   DEPENDS boost
 )
 
@@ -118,6 +119,7 @@ include_directories(include/${PROJECT_NAME})
 include_directories(
   ${catkin_INCLUDE_DIRS}
   ${Boost_INCLUDE_DIRS}
+   ${ros_tools_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library

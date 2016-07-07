@@ -1,7 +1,7 @@
 #ifndef ROS_SUB_TO_FILE_INL
 #define ROS_SUB_TO_FILE_INL
 
-#include <ros_macros.h>
+#include <ros_tools/ros_macros.h>
 #include <fstream>
 
 // Note: template definition separate from implementation.
